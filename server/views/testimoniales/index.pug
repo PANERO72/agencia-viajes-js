@@ -1,0 +1,30 @@
+extends ../layout/index 
+block contenido
+    main.container.mt-5.mb-11
+        h1.text-center.mb-5 #{headingH1}
+        .row
+            .col-md-12
+                include ../layout/partials/testimoniales
+            .col-md-12
+                h2.text-center Agrega un Testimonial
+                .row.justify-content-center
+                    .col-md-8
+                        if(errores)
+                            each error in errores
+                                #alertas.alert.alert-danger.text-center=error.mensaje  
+                        else
+                            #{exito}
+                    .col-md-8 
+                        form#testimoniales(action="/testimoniales", method="POST")
+                            .mb-3 
+                                label(for="nombre", class="form-label") Nombre:
+                                input#nombre(type="text", name="nombre", class="form-control" placeholder="Tu Nombre", value=nombre)
+                            .mb-3 
+                                label(for="correo", class="form-label") Correo:
+                                input#correo(type="email", name="correo", class="form-control", placeholder="Tu Correo Electrónico", value=correo) 
+                            .mb-3 
+                                label(for="mensaje", class="form-label") Mensaje: 
+                                textarea#mensaje(name="mensaje", cols="30", rows="5", class="form-control", placeholder="Tu Mensaje")=mensaje
+                            .mb-3 
+                                button#btnResetear(type="reset", class="btn btn-secondary w-49 me-2") Resetear 
+                                input#btnEnviar(type="submit", class="btn btn-primary w-49", value="Enviar")

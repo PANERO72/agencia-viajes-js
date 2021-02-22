@@ -1,0 +1,23 @@
+• destinos_barcelona = Monumento Catedral la Sagrada Familia
+
+• destinos_canada = Lago Moraine en Parque nacional Banff a 180 km de Calgary, en la provincia de Alberta, Canadá
+
+• destinos_egipto = Pirámide de Kefrén perteneciente a la necrópolis de Guiza, Egipto
+
+• destinos_grecia = La Acrópolis de Atenas, Grecia
+
+• destinos_india = El Taj Mahal en la ciudad de Agra, estado de Uttar Pradesh (India), a orillas del río Yamuna,
+
+• destinos_japon  = El monte Fuji en isla de Honshu desde la Pagoda Chureito del parque Arakurayama Sengen de Fujiyoshida en la prefectura de Yamanashi
+
+• destinos_londres = El Puente de la Torre de Londres, que cruza el río Támesis cerca de la Torre de Londres en Inglaterra y Reino Unido
+
+• destinos_newyork =  La Estatua de la Libertad, de Nueva York, Estados Unidos. Se encuentra en la isla de la Libertad al sur de la isla de Manhattan, junto a la desembocadura del río Hudson y cerca de la isla Ellis. 
+
+• destinos_paris = La Torre Eiffel situada en el extremo del Campo de Marte a la orilla del río Sena, en Paris, Francia
+
+• destinos_rio = El Pan de Azúcar es un morro ubicado en la bahía de Guanabara, junto al igual que Cristo Redentor, en Río de Janeiro, Brasil
+
+• destinos_roma = El Coliseo o Anfiteatro Flavio ubicado en el este del Foro Romano, en Roma, Italia
+
+• destinos_rusia = La Catedral de la Intercesión de la Santísima Virgen en el Montículo, más conocida como Catedral de San Basilio, ubicada en la Plaza Roja de la ciudad de Moscú, Rusia

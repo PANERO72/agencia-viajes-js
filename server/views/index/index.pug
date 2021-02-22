@@ -1,0 +1,31 @@
+extends ../layout/index
+block slider
+    .slider
+        h1 Rio de Janeiro
+        em aventura
+block contenido
+    main.container.mt-5
+        h2.text-center.mb-5 Sobre Nosotros 
+        .row.mb-5
+            .col-md-6 
+                p Ut repellendus exercitationem dolorum, ducimus quasi eaque sapiente? Eius beatae esse animi et debitis nam consectetur, optio tenetur asperiores. 
+                
+                p Amet libero ab optio nam dolor rerum delectus aliquam labore autem doloremque, consequuntur est voluptatibus ut, vero aperiam mollitia. Alias, laudantium nisi?
+
+                p Officia illo corrupti esse voluptatum voluptates maxime repellat magni consectetur. Voluptas in delectus tempora odio hic? Cumque consequuntur obcaecati earum.
+            .col-md-6
+                img(src="/assets/img/inicio_nosotros.jpg", alt="Imagen de Nosotros", class="img-fluid-2")
+        h2.text-center.mb-5= headingH1
+        include ../layout/partials/viajes
+    .descuento.mt-4.mb-5
+        .container 
+            .row 
+                .col-md-6
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaje a Calgary, Canada en Primavera
+                        p.fecha 20 de Marzo 2021 — 16 de Abril 2021
+                        p.precio 6.000 €
+    .container.mb-4
+        h2.text-center.mt-4 Testimoniales
+        include ../layout/partials/testimoniales

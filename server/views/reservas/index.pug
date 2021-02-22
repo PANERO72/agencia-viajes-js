@@ -1,0 +1,82 @@
+extends ../layout/index
+block contenido
+    main.container.mt-5
+        .row
+            .col-md-12
+                h2.text-center #{headingH1} 
+                    span.sub-titulo #{viaje.titulo}
+                .row.justify-content-center
+                    .col-md-8
+                        if(errores)
+                            each error in errores
+                                #alertas.alert.alert-danger.text-center=error.mensaje  
+                        else
+                            #{exito}
+                    .col-md-8
+                        .row
+                            form#reservas(action="/reservas", method="POST")
+                            .col-6.mb-3
+                                label(for="nombre", class="form-label") Nombre:
+                                input#nombre(type="text", name="nombre", class="form-control" placeholder="Tu Nombre")
+                            .col-6.mb-3 
+                                label(for="correo", class="form-label") Correo:
+                                input#correo(type="email", name="correo", class="form-control", placeholder="Tu Correo Electrónico") 
+                            .col-12.mb-3
+                                label(for="pago", class="form-label") Forma de Pago:
+                            .col-12.mb-3.ms-2
+                                .form-check.form-check-inline 
+                                    input#pagoEfectivo(type="radio", name="forma-pago", class="form-check-input", value="efectivo", checked)
+                                    label(for="pagoEfectivo", class="form-check-label") Efectivo
+                                .form-check.form-check-inline 
+                                    input#pagoTarjeta(type="radio", name="forma-pago", class="form-check-input", value="tarjeta")
+                                    label(for="pagoTarjeta", class="form-check-label") Tarjeta de credito
+                                .mb-3.mt-3#pagar-tarjeta.creditCardForm
+                                    .payment
+                                        #mensajes.text-center.alert.alert-danger.mb-3
+                                        form#tarjeta-credito
+                                            #card-number-field.form-group
+                                                label(for='cardNumber') Número de tarjeta: 
+                                                    i.far.fa-question-circle.ayuda-numero-tarjeta
+                                                input#cardNumber.form-control(type='text', name="cardNumber")
+                                            .form-group.owner
+                                                label(for='owner') Nombre del Titular:
+                                                input#owner.form-control(type='text', name="owner")
+                                            .form-group.CVV
+                                                label(for='cvv') Código de seguridad (CVV):
+                                                    i.far.fa-question-circle.ayuda-codigo-seguridad
+                                                input#cvv.form-control(type='text', name="cvv")                           
+                                            #expiration-date.form-group
+                                                label Fecha de caducidad:
+                                                select
+                                                    option(value='01') Enero
+                                                    option(value='02') Febero 
+                                                    option(value='03') Marzo
+                                                    option(value='04') Abril
+                                                    option(value='05') Mayo
+                                                    option(value='06') Junio
+                                                    option(value='07') Julio
+                                                    option(value='08') Agosto
+                                                    option(value='09') Septiembere
+                                                    option(value='10') Octubere
+                                                    option(value='11') Noviembere
+                                                    option(value='12') Deciembere
+                                                select
+                                                    option(value='16')  2016
+                                                    option(value='17')  2017
+                                                    option(value='18')  2018
+                                                    option(value='19')  2019
+                                                    option(value='20')  2020
+                                                    option(value='21')  2021
+                                            #credit_cards.form-group
+                                                img#visa(src='/assets/img/visa.jpg')
+                                                img#mastercard(src='/assets/img/mastercard.jpg')
+                                                img#amex(src='/assets/img/amex.jpg')
+                                            #pay-now.form-group
+                                                button#reset-purchase.btn.btn-secondary.w-48.me-2(type="reset") Resetear 
+                                                button#confirm-purchase.btn.btn-default.w-48(type='submit') Confirmar
+                            .col-12.mb-3 
+                                label(for="observaciones", class="form-label") Observaciones: 
+                                textarea#observaciones(name="observaciones", cols="30", rows="5", class="form-control", placeholder="Tus Obsevaciones")
+                            .col-12.mb-3 
+                                button#btnResetear(type="reset", class="btn btn-secondary w-49 me-2") Resetear 
+                                input#btnEnviar(type="submit", class="btn btn-primary w-49", value="Enviar")
