@@ -43,3 +43,17 @@ collaborate (see also: git help workflows)
 concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
+
+## Instalación y Uso
+Para instalar las dependencias y paquetes de esta parte ejecute el siguiente comando:
+```bash
+npm install
+```
+Para iniciar la escucha de los cambios en los archivos en modo desarrollo ejecute el siguiente comando:
+```bash
+npm run dev
+```
+Para iniciar la aplicación en modo desarrollo ejecute el siguiente comando: 
+```bash
+npm run start
+```
