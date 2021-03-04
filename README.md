@@ -56,4 +56,19 @@ npm run dev
 Para iniciar la aplicación en modo desarrollo ejecute el siguiente comando: 
 ```bash
 npm run start
-```
+```  
+
+**Agregar un archivo nombrado ***variables.env*** con el siguiente contenido:**
+
+ DB_NAME=nombre_base_datos 
+ 
+ DB_USER=usuario_base_datos
+ 
+ DB_PASS=contraseña_base_datos
+ 
+ DB_HOST=host_base_datos
+ 
+ DB_PORT=puerto_base_datos
+
+
+ HOST=su_host
